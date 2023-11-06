@@ -1,0 +1,2 @@
+SELECT Ordersorder_id, Products.name AS product_name, Order_Items.quantity, Order_Items.quantity * Order_Items.unit_price AS total_amount
+FROM Order_Items INNER JOIN Orders ON Order_Items.order_id = Orders.order_id INNER JOIN Products ON Order_Items.product_id = Products.product_id ORDER BY Orders.order_id ASC;
